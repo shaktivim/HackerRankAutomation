@@ -1,5 +1,6 @@
-//Automate hacker rank from login url to code submission
+// Using promises Automate hacker rank from login url to code submission
 // Answer code writing and submission all should be automated
+//
 const Puppeteer = require("puppeteer");
 const answerArr = require("./code")
 // console.log(answerArr.answer[0])
@@ -43,7 +44,7 @@ browserOpen.then(function(browserObj){
     let waitForThreeSeconds = page.waitFor(3000);       // this wait for function waits on the page for 3000 milliseconds
     return waitForThreeSeconds;
 }).then(function(){
-    let allChallengesPromise = page.$$('a[data-analytics="ChallengeListChallengeName"]');       
+    let allChallengesPromise = page.$$('a[data-analytics="ChallengeListChallengeName"]');    //$$ stand for documents.query selector   (not jQuery)
     return allChallengesPromise;
 }).then(function(questionsArr){
     console.log(questionsArr.length);
