@@ -2,7 +2,7 @@
 // Answer code writing and submission all should be automated
 //
 const Puppeteer = require("puppeteer");
-const answerArr = require("./code")
+const answerArr = require("./answerCode")
 // console.log(answerArr.answer[0])
 const loginLink = 'https://www.hackerrank.com/auth/login';
 const loginId = "veerktm@gmail.com";
